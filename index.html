@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <title>Media Queries</title>
+  </head>
+  <body>
+    <h1>O que é Media Query?</h1>
+    <p>Media Query é utilizado para criar "regras" de formatações no estilo de uma página HTML. É possível criar determinadas regras para que a página siga uma formatação especifica a partir de uma determinada condição.</p>
+    <p>Essas regras são muito importantes para uma formatação responsiva de uma página, afim de proporcionar a visualização correta de uma página em todos os tipos de dispositivos (Celulares, Tablets, Pcs e etc...)</p>
+    <p>Por exemplo, é possível criar uma página que será exibida em uma tela de computador e posteriormente criar regras com Media Queries na qual essa exibição será ajustada ao tamanho exato de um celular.</p>
+
+    <h2>Media Types</h2>
+    <p>
+      Permite definir para qual tipo de formatação as regras deverão ser aplicadas. <br />
+      Os tipos disponíveis são:
+    </p>
+    <ul>
+      <li>Screen</li>
+      <p>- Para formatações realizadas em <b>Telas</b></p>
+      <li>Print</li>
+      <p>- Para formatações realizadas em <b>Impressões</b></p>
+      <li>Speech</li>
+      <p>- Para formatações realizadas em <b>Sintetizadores de voz</b></p>
+      <li>All</li>
+      <p>- Para formatações realizadas em <b>todos mencionados acima</b></p>
+    </ul>
+
+    <h2>Media Features</h2>
+    <p>Permite adicionar diversos atributos na formatação, não se limitando apenas a responsividade da tela</p>
+    <p>Existem diversos Media Features que podem ser visualizados através deste link -> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features" target="_blank">Media Features</a></p>
+
+    <h2>Operadores Lógicos</h2>
+    <p>Por se tratar de regras de formatação, a funcionalidade Media Query permite que você crie condições especificas para chegar no resultado desejado.</p>
+    <b>Formatações individuais:</b>
+    <p>@media screen (min-width: 400px){} -> A formatação será aplicada apenas se a tela estiver no mínimo com 400 píxels</p>
+    <b>Formatações com operadores (AND):</b>
+    <p>@media screen (min-width: 400px) and (max-width: 500px) {} -> A formatação será aplicada se a tela estiver entre 400px e 500px</p>
+    <b>Formatações com operadores (OR):</b>
+    <p>@media screen (min-width: 400px),(max-width-500px) {} -> A formatação será aplicada se a tela estiver com no mínimo 400 píxels OU no máximo com 500 píxels</p>
+
+    <h2 id="titulo-exemplo">Exemplos de uso das Media Queries</h2>
+    <div id="bloco-geral">
+      <div id="bloco-1">
+        <p>A cor deste bloco será vermelha caso ele tenha MENOS de 500px</p>
+      </div>
+
+      <div id="bloco-2">
+        <p>A cor deste bloco será azul caso ele tenha MAIS de 500px</p>
+      </div>
+
+      <div id="bloco-3">
+        <p>A cor deste bloco será roxa caso ele esteja ENTRE 400px e 500px</p>
+      </div>
+
+      <div id="bloco-4">
+        <p>A cor deste bloco será verde caso ele tenha no minimo 500px OU no máximo 400px</p>
+      </div>
+    </div>
+  </body>
+</html>
